@@ -152,7 +152,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-.land-button, .land-button-resume {
+.land-button, .land-button-seconday-colour {
     border: none;
     padding: 14px 20px;
     border-radius: 20px;
@@ -174,13 +174,13 @@ h1 {
     background-color: #D66845;
 }
 
-.land-button-resume {
+.land-button-seconday-colour {
     background-color: var(--secondary-warm);
     color: var(--text-warm);
 
 }
 
-.land-button-resume:hover {
+.land-button-seconday-colour:hover {
     background-color: #D4B86B;
 }
 
@@ -206,7 +206,6 @@ h1 {
   max-width: 300px;
   width: 100%;
   height: auto;
-  /* optional rounded corners */
   border-radius: 50px; 
   object-fit: cover;
 
@@ -217,9 +216,16 @@ h1 {
   margin-right: 5rem;
 }
 
+/* brief about */
+.short-about {
+    margin-bottom: 5px;
+}
 
 
 
+#email-address {
+    color: var(--accent-warm);
+}
 
 
 
