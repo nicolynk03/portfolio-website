@@ -77,7 +77,7 @@ body {
 
 /* general */
 .container {
-    margin: 4rem 1.5rem;
+    margin: 4rem 2.5rem;
 }
 
 .content {
@@ -175,6 +175,53 @@ h1 {
 .land-button-resume:hover {
     background-color: #D4B86B;
 }
+
+.landing-wrapper {
+    display: flex;
+    /* vertically aligns things at the centre */
+    align-items: center;
+    /* note: space-between pushes two sides apart */
+    /* justify-content: space-between; */
+    justify-content: flex-start; /* pack items close to start */
+    /* for spacing between text and image */
+    gap: 0.1rem;
+    margin-top: 1rem;
+}
+
+/* make text and image each take some space */
+.landing-text {
+  flex: 1;
+}
+
+/* limit image size and align right */
+.landing-image img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  /* optional rounded corners */
+  border-radius: 50px; 
+  object-fit: cover;
+
+  /* adjust margin */
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: 5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
