@@ -264,8 +264,16 @@ h1 {
     stroke: #F9F6EF;
 }
 
-
-
+/* footer */
+footer {
+    margin-top: auto;
+    width: 100%;
+    background-color: var(--text-warm);
+    color: var(--primary-warm);
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+}
 
 
 
