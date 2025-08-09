@@ -75,6 +75,59 @@ body {
     color: var(--text-warm);
 }
 
+/* general */
+.container {
+    margin: 4rem 1.5rem;
+}
+
+.content {
+    padding: 16px;
+}
+
+span {
+    color: var(--accent-warm);
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+    color: var(--text-warm);
+}
+
+p {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 45px;
+}
+
+h1 {
+    font-size: 68px;
+}
+
+
+#home,
+#about,
+#current-stuff,
+#experience,
+#contact {
+    padding: 3rem;
+}
+
+
+
+
+
+
+
 
 
 
