@@ -123,11 +123,58 @@ h1 {
 }
 
 
+/* landing page */
+.landing-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    /* for responsiveness on smaller screens */
+    flex-wrap: wrap;
+}
 
+.landing-text {
+    flex: 1;
+    min-width: 250px;
+}
 
+.landing-content,
+.short-about {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
 
+.land-button, .land-button-resume {
+    border: none;
+    padding: 14px 20px;
+    border-radius: 20px;
+    margin-top: 18px;
+    cursor: pointer;
+    font-size: medium;
+    position: relative;
+    /* allow ::before outside */
+    overflow: visible;
+    z-index: 0;
+}
 
+.land-button {
+    background-color: var(--primary-warm);
+    color: var(--text-warm);
+}
 
+.land-button:hover {
+    background-color: #D66845;
+}
+
+.land-button-resume {
+    background-color: var(--secondary-warm);
+    color: var(--text-warm);
+
+}
+
+.land-button-resume:hover {
+    background-color: #D4B86B;
+}
 
 
 
