@@ -10,9 +10,16 @@ html {
     scroll-behavior: smooth;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     margin: 0;
     background: var(--background);
+    flex-direction: column;
+    min-height: 100vh; /* ensure full viewport height */
+    display: flex;
 }
 
 * {
@@ -78,6 +85,7 @@ body {
 /* general */
 .container {
     margin: 4rem 2.5rem;
+    flex: 1; /* this makes the container take all available space */
 }
 
 .content {
