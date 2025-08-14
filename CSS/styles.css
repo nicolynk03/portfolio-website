@@ -234,13 +234,27 @@ h1 {
 }
 
 .dev-list {
-    justify-content: center;
     display: flex;
+    justify-content: center;
     gap: 10rem;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 38px;
-    margin-bottom: 15px;
+    /* left and right margin is 10px, top is 38px, and bottom is 15px */
+    margin: 38px 25px 15px;
+
+    color: #639c0f;
+}
+
+.dev-desc {
+    display: flex;
+    flex-direction: column;
+    /* centers icon and text horizontally */
+    align-items: center;
+    /* centers text */
+    text-align: center;
+}
+
+.dev-desc-text {
+    /* margin-right: 10rem; */
+    margin: 0;
 }
 
 
