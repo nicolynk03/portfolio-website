@@ -237,7 +237,7 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 10rem;
-    /* left and right margin is 10px, top is 38px, and bottom is 15px */
+    /* left and right margin are 25px, top is 38px, and bottom is 15px */
     margin: 38px 25px 15px;
 
     color: #639c0f;
