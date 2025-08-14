@@ -237,8 +237,8 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 10rem;
-    /* left and right margin are 25px, top is 38px, and bottom is 15px */
-    margin: 38px 25px 15px;
+    /* left, right, and bottom margins are 25px, top is 38px */
+    margin: 38px 25px;
 
     color: #639c0f;
 }
@@ -255,6 +255,10 @@ h1 {
 .dev-desc-text {
     /* margin-right: 10rem; */
     margin: 0;
+}
+
+#view-more-about-button {
+    margin-top: 0rem;
 }
 
 
