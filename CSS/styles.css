@@ -27,7 +27,7 @@
 
     --footer-bg: #2b2f36;
     /* --footer-bg: #2e3b4e; */ /* kept as a second option*/
-    --footer-text: #f2f2f2;
+    --footer-text: #5b96c8;
 }
 
 html {
@@ -342,6 +342,32 @@ h1 {
 #email-address {
     color: #81ca14;
 }
+
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+
+    /* adjust position to be slightly above the logo */
+    /* moves button upward relative to the normal position */
+    position: relative;
+    top: -8px;
+    /* keeps it from clashing/bumping the (text) logo */
+    margin-right: 8px;
+}
+
+#theme-toggle:hover {
+    color: var(--accent);
+    /* tiny lift on hover for visual feedback*/
+    transform: translateY(-2px);
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
 
 .socials {
     display: flex;
