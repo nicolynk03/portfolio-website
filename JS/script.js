@@ -24,3 +24,24 @@ window.addEventListener('DOMContentLoaded', () => {
     const themeBtn = document.getElementById("theme-toggle");
     themeBtn.innerHTML = currentTheme === "dark" ? "🌙" : '☀️';
 });
+
+
+// change navbar style when user scrolls through the website
+window.onscroll = function() {
+    navbarWhenScrolled();
+};
+
+function navbarWhenScrolled() {
+    const navbar = document.querySelector('.navbar');
+
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        // if scrolled more than 50px, add the 'scrolled' class
+        navbar.classList.add('scrolled');
+    } else {
+        // if at the top or scrolled less than 50px, remove the 'scrolled' class
+        navbar.classList.remove('scrolled');
+    }
+}
+
+
+

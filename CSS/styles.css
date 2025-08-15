@@ -12,6 +12,8 @@
     --accent-hover: #7A8B60;
     --svg-icon-hover: #F9F6EF;
 
+    --navbar-scrolled: rgba(233, 203, 134, 0.9);
+
     --footer-bg: #454545;
     --footer-text: #E97451;
     --experience-title-about-page: #737070;
@@ -28,6 +30,8 @@
     
     --land-btn-hover: #163051;
     --land-btn-secondary-hover: #e0a91f;
+
+    --navbar-scrolled: rgba(245, 166, 35, 0.9);
 
     --accent-hover: #4a85b0;
     --svg-icon-hover: #81ca14;
@@ -82,10 +86,13 @@ body {
     color: var(--primary);
     margin-bottom: 0.4rem;
     margin-right: auto;
+    align-items: center;
+    margin-right: auto;
 
     img {
         height: 40px;
         cursor: pointer;
+        margin-left: 0.5rem;
     }
 }
 
@@ -103,6 +110,7 @@ body {
     display: inline-block;
     font-size: 1.5rem;
     margin-right: 3rem;
+    text-decoration: none;
 }
 
 .navbar .navbar-nav a:hover {
@@ -114,10 +122,18 @@ body {
     color: var(--text);
 }
 
+.navbar.scrolled {
+    background-color: var(--navbar-scrolled);
+    backdrop-filter: blur(5px);
+    /* safari */
+    -webkit-backdrop-filter: blur(5px);
+}
+
 /* general */
 .container {
     margin: 4rem 2.5rem;
     flex: 1; /* this makes the container take all available space */
+    padding-top: 24px;
 }
 
 .content {
