@@ -1,9 +1,33 @@
 :root {
     --background: #FAF8F3;
-    --primary-warm: #E97451;
-    --secondary-warm: #E9CB86;
-    --accent-warm: #9CB380;
-    --text-warm: #454545;
+    --primary: #E97451;
+    --secondary: #E9CB86;
+    --accent: #9CB380;
+    --text: #454545;
+    --neon-green: #81ca14;
+
+    --land-btn-hover: #D66845;
+    --land-btn-secondary-hover: #D4B86B;
+
+    --footer-bg: #454545;
+    --footer-text: #E97451;
+}
+
+/* dark mode variables */
+[data-theme="dark"] {
+    --background: #353a40;
+    --primary: #1F3A63;
+    --secondary: #F5A623;
+    --accent: #5b96c8;
+    --text: #f2f2f2;
+    --neon-green: #81ca14;
+    
+    --land-btn-hover: #163051;
+    --land-btn-secondary-hover: #e0a91f;
+
+    --footer-bg: #2b2f36;
+    /* --footer-bg: #2e3b4e; */ /* kept as a second option*/
+    --footer-text: #f2f2f2;
 }
 
 html {
@@ -40,14 +64,14 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgb(233, 203, 134);
+    background-color: var(--secondary);
     z-index: 9999;
 }
 
 .navbar .logo {
     font-size: 1.3rem;
     font-weight: 500;
-    color: var(--primary-warm);
+    color: var(--primary);
     margin-bottom: 0.4rem;
     margin-right: auto;
 
@@ -58,7 +82,7 @@ body {
 }
 
 .navbar .logo a:hover {
-    color: var(--text-warm);
+    color: var(--text);
 }
 
 .navbar .navbar-nav {
@@ -67,19 +91,19 @@ body {
 }
 
 .navbar .navbar-nav a {
-    color: var(--text-warm);
+    color: var(--text);
     display: inline-block;
     font-size: 1.5rem;
     margin-right: 3rem;
 }
 
 .navbar .navbar-nav a:hover {
-    color: var(--primary-warm);
+    color: var(--primary);
 }
 
 .navbar-extra {
     display: none;
-    color: var(--text-warm);
+    color: var(--text);
 }
 
 /* general */
@@ -93,7 +117,7 @@ body {
 }
 
 span {
-    color: var(--accent-warm);
+    color: var(--accent);
 }
 
 h1,
@@ -102,7 +126,7 @@ h3,
 h4,
 p,
 li {
-    color: var(--text-warm);
+    color: var(--text);
 }
 
 p {
@@ -173,7 +197,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-.land-button, .land-button-seconday-colour {
+.land-button, .land-button-secondary-colour {
     border: none;
     padding: 14px 20px;
     border-radius: 20px;
@@ -184,26 +208,27 @@ h1 {
     /* allow ::before outside */
     overflow: visible;
     z-index: 0;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .land-button {
-    background-color: var(--primary-warm);
-    color: var(--text-warm);
+    background-color: var(--primary);
+    color: var(--text);
 }
 
 .land-button:hover {
-    background-color: #D66845;
+    background-color: var(--land-btn-hover);
     color: #F9F6EF;
 }
 
-.land-button-seconday-colour {
-    background-color: var(--secondary-warm);
-    color: var(--text-warm);
+.land-button-secondary-colour {
+    background-color: var(--secondary);
+    color: var(--text);
 
 }
 
-.land-button-seconday-colour:hover {
-    background-color: #D4B86B;
+.land-button-secondary-colour:hover {
+    background-color: var(--land-btn-secondary-hover);
     color: #F9F6EF;
 }
 
@@ -305,7 +330,7 @@ h1 {
 }
 
 #about-page-about-section h2, #experience h2 {
-    color: var(--accent-warm);
+    color: var(--accent);
 }
 
 .experience-title h3 {
@@ -330,7 +355,7 @@ h1 {
 }
 
 .socials a {
-    background-color: var(--accent-warm);
+    background-color: var(--accent);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -344,7 +369,7 @@ h1 {
 }
 
 .socials svg {
-    stroke: var(--text-warm);
+    stroke: var(--text);
 }
 
 .socials a:hover {
@@ -359,8 +384,8 @@ h1 {
 footer {
     margin-top: auto;
     width: 100%;
-    background-color: var(--text-warm);
-    color: var(--primary-warm);
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
     font-size: 18px;
     text-align: center;
     padding: 5px;
