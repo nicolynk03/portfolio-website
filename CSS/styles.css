@@ -152,70 +152,6 @@ body {
     padding: 16px;
 }
 
-/* media queries */
-/* laptop */
-@media (max-width: 1366px) {
-    html {
-        font-size: 75%;
-    }
-}
-
-/* tablet */
-@media (max-width: 768px) {
-    html {
-        font-size: 62.5%;
-    }
-
-    /* sidebar menu  */
-    #hamburger-menu {
-        display: inline-block;
-    }
-
-    .navbar .navbar-nav {
-        display: flex;
-        flex-direction: column;
-        /* stack vertically */
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        /* background-color: #D4B77B; */
-        background-color: #beb197;
-        width: 30rem;
-        height: 100vh;
-        transition: 0.3s;
-    }
-
-    .navbar .navbar-nav.active {
-        right: 0;
-    }
-
-    .navbar .navbar-nav a {
-        /* color: ; */
-        display: block;
-        margin: 1.5rem;
-        padding: 0.5rem;
-        font-size: 2rem;
-    }
-
-    [data-theme="dark"] .navbar .navbar-nav {
-        background-color: #2e3b4e;
-    }
-
-    [data-theme="dark"] .navbar .navbar-nav a:hover {
-        color: var(--secondary);
-    }
-
-}
-
-/* mobile phone */
-@media (max-width: 450px) {
-    html {
-        font-size: 55%;
-    }
-}
-
-/* media queries end*/
-
 span {
     color: var(--accent);
 }
@@ -347,8 +283,12 @@ h1 {
     justify-content: flex-start;
     /* pack items close to start */
     /* for spacing between text and image */
-    gap: 0.1rem;
+    /* gap: 0.1rem; */
+    gap: 3rem;
+    /* much more space between text and image */
     margin-top: 1rem;
+    flex-wrap: wrap;
+    /* allows stacking on small screens */
 }
 
 /* make text and image each take some space */
@@ -363,6 +303,9 @@ h1 {
     height: auto;
     border-radius: 50px;
     object-fit: cover;
+
+    object-fit: cover;
+    display: block;
 
     /* adjust margin */
     margin-top: auto;
@@ -524,3 +467,100 @@ footer {
     text-align: center;
     padding: 5px;
 }
+
+
+/* media queries */
+/* laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+
+
+    /* landing page image adjust */
+    .landing-image img {
+        max-width: 225px;
+        width: 100%;
+        height: auto;
+        border-radius: 50px;
+        object-fit: cover;
+
+        /* adjust margin */
+        margin-top: auto;
+        margin-bottom: 2rem;
+        margin-left: auto;
+        margin-right: 2rem;
+    }
+
+    /* sidebar menu  */
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        /* stack vertically */
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        /* background-color: #D4B77B; */
+        background-color: #beb197;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        /* color: ; */
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    [data-theme="dark"] .navbar .navbar-nav {
+        background-color: #2e3b4e;
+    }
+
+    [data-theme="dark"] .navbar .navbar-nav a:hover {
+        color: var(--secondary);
+    }
+
+}
+
+/* mobile phone */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+
+    .landing-wrapper {
+        /* stack vertically */
+        flex-direction: column; 
+        /* center text and image */
+        align-items: center;
+        /* spacing between text and image */
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .landing-image img {
+        max-width: 180px;
+        margin: 0 auto 2rem auto;
+        /* shrink further for small screens */
+    }
+}
+
+/* media queries end*/
