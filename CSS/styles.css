@@ -11,6 +11,7 @@
 
     --footer-bg: #454545;
     --footer-text: #E97451;
+    --experience-title-about-page: #737070;
 }
 
 /* dark mode variables */
@@ -28,6 +29,7 @@
     --footer-bg: #2b2f36;
     /* --footer-bg: #2e3b4e; */ /* kept as a second option*/
     --footer-text: #5b96c8;
+    --experience-title-about-page: #ccbbbb;
 }
 
 html {
@@ -334,7 +336,7 @@ h1 {
 }
 
 .experience-title h3 {
-    color: #737070;
+    color: var(--experience-title-about-page);
 }
 
 
