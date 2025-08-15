@@ -69,7 +69,7 @@ body {
 /* navigation bar */
 .navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 0.5rem 5%;
     position: fixed;
@@ -101,8 +101,7 @@ body {
 }
 
 .navbar .navbar-nav {
-    margin-right: auto;
-    margin-left: 3rem;
+    display: flex;
 }
 
 .navbar .navbar-nav a {
