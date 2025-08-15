@@ -43,5 +43,19 @@ function navbarWhenScrolled() {
     }
 }
 
+// toggle sidebar menu (active class)
+const navbarNav = document.querySelector('.navbar-nav');
+// when hamburger menu is clicked
+document.querySelector('#hamburger-menu').onclick = () => {
+    navbarNav.classList.toggle('active');
+};
+// close sidebar menu by clicking anywhere outside the sidebar itself
+const hamburger = document.querySelector('#hamburger-menu');
+document.addEventListener('click', function(event) {
+    // if clicked outside hamburger menu and navbar
+    if(!hamburger.contains(event.target) && !navbarNav.contains(event.target)) {
+        navbarNav.classList.remove('active');
+    }
+});
 
 

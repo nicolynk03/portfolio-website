@@ -27,7 +27,7 @@
     --accent: #5b96c8;
     --text: #f2f2f2;
     --neon-green: #81ca14;
-    
+
     --land-btn-hover: #163051;
     --land-btn-secondary-hover: #e0a91f;
 
@@ -37,7 +37,8 @@
     --svg-icon-hover: #81ca14;
 
     --footer-bg: #2b2f36;
-    /* --footer-bg: #2e3b4e; */ /* kept as a second option*/
+    /* --footer-bg: #2e3b4e; */
+    /* kept as a second option*/
     --footer-text: #5b96c8;
     --experience-title-about-page: #ccbbbb;
 }
@@ -46,7 +47,8 @@ html {
     scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -54,7 +56,8 @@ body {
     margin: 0;
     background: var(--background);
     flex-direction: column;
-    min-height: 100vh; /* ensure full viewport height */
+    min-height: 100vh;
+    /* ensure full viewport height */
     display: flex;
 }
 
@@ -140,7 +143,8 @@ body {
 /* general */
 .container {
     margin: 4rem 2.5rem;
-    flex: 1; /* this makes the container take all available space */
+    flex: 1;
+    /* this makes the container take all available space */
     padding-top: 24px;
 }
 
@@ -162,9 +166,45 @@ body {
         font-size: 62.5%;
     }
 
+    /* sidebar menu  */
     #hamburger-menu {
         display: inline-block;
     }
+
+    .navbar .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        /* stack vertically */
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        /* background-color: #D4B77B; */
+        background-color: #beb197;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        /* color: ; */
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    [data-theme="dark"] .navbar .navbar-nav {
+        background-color: #2e3b4e;
+    }
+
+    [data-theme="dark"] .navbar .navbar-nav a:hover {
+        color: var(--secondary);
+    }
+
 }
 
 /* mobile phone */
@@ -173,6 +213,7 @@ body {
         font-size: 55%;
     }
 }
+
 /* media queries end*/
 
 span {
@@ -189,25 +230,30 @@ li {
 }
 
 p {
-    font-size: 1.375rem;       /* 22px */
-    line-height: 1.6;         /* ~35px line height for readability */
+    font-size: 1.375rem;
+    /* 22px */
+    line-height: 1.6;
+    /* ~35px line height for readability */
     margin-bottom: 1em;
 }
 
 h3 {
-    font-size: 2.063rem;       /* ~33px (22 × 1.5) */
+    font-size: 2.063rem;
+    /* ~33px (22 × 1.5) */
     line-height: 1.3;
     margin-bottom: 0.75em;
 }
 
 h2 {
-    font-size: 3.094rem;       /* ~49.5px (33 × 1.5) */
+    font-size: 3.094rem;
+    /* ~49.5px (33 × 1.5) */
     line-height: 1.2;
     margin-bottom: 0.75em;
 }
 
 h1 {
-    font-size: 4.641rem;       /* ~74.25px (49.5 × 1.5) */
+    font-size: 4.641rem;
+    /* ~74.25px (49.5 × 1.5) */
     line-height: 1.1;
     margin-bottom: 0.75em;
 }
@@ -256,7 +302,8 @@ h1 {
     margin-bottom: 20px;
 }
 
-.land-button, .land-button-secondary-colour {
+.land-button,
+.land-button-secondary-colour {
     border: none;
     padding: 14px 20px;
     border-radius: 20px;
@@ -297,7 +344,8 @@ h1 {
     align-items: center;
     /* note: space-between pushes two sides apart */
     /* justify-content: space-between; */
-    justify-content: flex-start; /* pack items close to start */
+    justify-content: flex-start;
+    /* pack items close to start */
     /* for spacing between text and image */
     gap: 0.1rem;
     margin-top: 1rem;
@@ -305,22 +353,22 @@ h1 {
 
 /* make text and image each take some space */
 .landing-text {
-  flex: 1;
+    flex: 1;
 }
 
 /* limit image size and align right */
 .landing-image img {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
-  border-radius: 50px; 
-  object-fit: cover;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+    object-fit: cover;
 
-  /* adjust margin */
-  margin-top: auto;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  margin-right: 5rem;
+    /* adjust margin */
+    margin-top: auto;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: 5rem;
 }
 
 .about-image img {
@@ -388,7 +436,8 @@ h1 {
     color: #81ca14;
 }
 
-#about-page-about-section h2, #experience h2 {
+#about-page-about-section h2,
+#experience h2 {
     color: var(--accent);
 }
 
@@ -475,9 +524,3 @@ footer {
     text-align: center;
     padding: 5px;
 }
-
-
-
-
-
-
