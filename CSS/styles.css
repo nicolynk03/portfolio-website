@@ -116,10 +116,19 @@ body {
     color: var(--primary);
 }
 
-.navbar-extra {
-    display: none;
+.navbar .navbar-extra a {
     color: var(--text);
+    margin: 0 0.5rem;
 }
+
+.navbar .navbar-extra a:hover {
+    color: var(--primary);
+}
+
+#hamburger-menu {
+    display: none;
+}
+
 
 .navbar.scrolled {
     background-color: var(--navbar-scrolled);
@@ -138,6 +147,33 @@ body {
 .content {
     padding: 16px;
 }
+
+/* media queries */
+/* laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+}
+
+/* mobile phone */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}
+/* media queries end*/
 
 span {
     color: var(--accent);
