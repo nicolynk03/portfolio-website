@@ -193,6 +193,7 @@ h1 {
 
 .land-button:hover {
     background-color: #D66845;
+    color: #F9F6EF;
 }
 
 .land-button-seconday-colour {
@@ -203,6 +204,7 @@ h1 {
 
 .land-button-seconday-colour:hover {
     background-color: #D4B86B;
+    color: #F9F6EF;
 }
 
 .landing-wrapper {
@@ -313,7 +315,7 @@ h1 {
 
 /* misc */
 #email-address {
-    color: var(--accent-warm);
+    color: #81ca14;
 }
 
 .socials {
