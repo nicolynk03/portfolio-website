@@ -9,6 +9,9 @@
     --land-btn-hover: #D66845;
     --land-btn-secondary-hover: #D4B86B;
 
+    --accent-hover: #7A8B60;
+    --svg-icon-hover: #F9F6EF;
+
     --footer-bg: #454545;
     --footer-text: #E97451;
     --experience-title-about-page: #737070;
@@ -25,6 +28,9 @@
     
     --land-btn-hover: #163051;
     --land-btn-secondary-hover: #e0a91f;
+
+    --accent-hover: #4a85b0;
+    --svg-icon-hover: #81ca14;
 
     --footer-bg: #2b2f36;
     /* --footer-bg: #2e3b4e; */ /* kept as a second option*/
@@ -401,11 +407,11 @@ h1 {
 }
 
 .socials a:hover {
-    background-color: #7A8B60;
+    background-color: var(--accent-hover);
 }
 
 .socials svg:hover {
-    stroke: #F9F6EF;
+    stroke: var(--svg-icon-hover);
 }
 
 /* footer */
