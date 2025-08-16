@@ -285,11 +285,12 @@ h1 {
     color: var(--hover-text-2);
 }
 
-.land-button:hover, .land-button-secondary-colour:hover {
+.land-button:hover,
+.land-button-secondary-colour:hover {
     /* slighltly enlarge buttons */
     transform: scale(1.05);
     /* subtle depth */
-    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -332,6 +333,114 @@ h1 {
     margin-left: auto;
     margin-right: 5rem;
 }
+
+
+/* (homepage) image emoji css start */
+/* container */
+.landing-image {
+    position: relative;
+    display: inline-block;
+    /* allow emojis outside */
+    overflow: visible;
+}
+
+/* floating emojis */
+.emoji {
+    position: absolute;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Positions */
+.emoji1 {
+    top: 5%;
+    left: 10%;
+}
+
+.emoji2 {
+    top: 15%;
+    right: 12%;
+}
+
+.emoji3 {
+    bottom: 15%;
+    left: 20%;
+}
+
+.emoji4 {
+    bottom: 22%;
+    right: 1%;
+}
+
+.emoji5 {
+    bottom: 3%;
+    left: 5%;
+}
+
+.emoji6 {
+    top: 5%;
+    left: 95%;
+}
+
+.emoji7 {
+    top: 14%;
+    left: 8%;
+}
+
+.emoji8 {
+    bottom: 14%;
+    left: 20%;
+}
+
+.emoji9 {
+    bottom: 22%;
+    right: 1%;
+}
+
+.emoji10 {
+    bottom: 40%;
+    right: -15%;
+}
+
+/* Hover: fade in + float + rotate */
+.landing-image:hover .emoji {
+    opacity: 1;
+    animation: float 3s ease-in-out infinite, rotate 18s linear infinite;
+}
+
+/* Float up and down */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Slow rotation */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Image zoom on hover (optional) */
+.landing-image:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 150, 255, 0.2);
+}
+
+/* (homepage) image emoji css end */
+
 
 .about-image img {
     margin-bottom: 4rem;
@@ -573,7 +682,7 @@ footer {
 
     .landing-wrapper {
         /* stack vertically */
-        flex-direction: column; 
+        flex-direction: column;
         /* center text and image */
         align-items: center;
         /* spacing between text and image */
