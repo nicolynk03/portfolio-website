@@ -12,6 +12,9 @@
     --accent-hover: #7A8B60;
     --svg-icon-hover: #F9F6EF;
 
+    --hover-text-1: #F9F6EF;
+    --hover-text-2: #F9F6EF;
+
     --navbar-scrolled: rgba(233, 203, 134, 0.9);
 
     --footer-bg: #454545;
@@ -30,6 +33,10 @@
 
     --land-btn-hover: #163051;
     --land-btn-secondary-hover: #e0a91f;
+
+    /* --hover-text-1: #81ca14; */
+    --hover-text-1: #F5A623;
+    --hover-text-2: #000000;
 
     --navbar-scrolled: rgba(245, 166, 35, 0.9);
     --highlight-colour: #F5A623;
@@ -261,7 +268,7 @@ h1 {
 
 .land-button:hover {
     background-color: var(--land-btn-hover);
-    color: #F9F6EF;
+    color: var(--hover-text-1);
 }
 
 .land-button-secondary-colour {
@@ -272,7 +279,8 @@ h1 {
 
 .land-button-secondary-colour:hover {
     background-color: var(--land-btn-secondary-hover);
-    color: #F9F6EF;
+    color: var(--hover-text);
+    color: var(--hover-text-2);
 }
 
 .landing-wrapper {
