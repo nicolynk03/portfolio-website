@@ -379,13 +379,13 @@ h1 {
 }
 
 .emoji6 {
-    top: 5%;
-    left: 95%;
+    top: 4%;
+    left: 80%;
 }
 
 .emoji7 {
-    top: 14%;
-    left: 8%;
+    top: 12%;
+    left: 5%;
 }
 
 .emoji8 {
@@ -399,9 +399,10 @@ h1 {
 }
 
 .emoji10 {
-    bottom: 40%;
-    right: -15%;
+    bottom: 28%;
+    left: 4%;
 }
+/* (homepage) image emoji css end */
 
 /* Hover: fade in + float + rotate */
 .landing-image:hover .emoji {
@@ -444,7 +445,7 @@ h1 {
 
 .about-image img {
     margin-bottom: 4rem;
-    margin-right: -2rem;
+    margin-right: 2rem;
 }
 
 /* brief about */
