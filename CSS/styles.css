@@ -326,8 +326,11 @@ h1 {
 
 .dev-list {
     display: flex;
+    /* allow list to wrap*/
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 10rem;
+    /* for small devices */
+    gap: 2rem;
     /* left, right, and bottom margins are 25px, top is 38px */
     margin: 38px 25px;
 
@@ -335,6 +338,10 @@ h1 {
 }
 
 .dev-desc {
+    /* each item can adjust (shrink/grow), min width of 150px */
+    flex: 1 1 150px;
+    /* keeps item from getting to wide */
+    max-width: 200px;
     display: flex;
     flex-direction: column;
     /* centers icon and text horizontally */
@@ -483,7 +490,6 @@ footer {
         font-size: 62.5%;
     }
 
-
     /* landing page image adjust */
     .landing-image img {
         max-width: 225px;
@@ -560,6 +566,16 @@ footer {
         max-width: 180px;
         margin: 0 auto 2rem auto;
         /* shrink further for small screens */
+    }
+}
+
+/* media queries for dev list in landing page */
+/* for tablets and larger devices */
+@media (min-width: 768px) {
+    .dev-list {
+        /* keep in one row */
+        flex-wrap: nowrap;
+        gap: 10rem;
     }
 }
 
