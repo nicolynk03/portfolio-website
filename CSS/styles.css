@@ -3,7 +3,8 @@
     --primary: #E97451;
     --secondary: #E9CB86;
     --accent: #9CB380;
-    --text: #454545;
+    /* --text: #454545; */
+    --text: #3A3A3A;
     --neon-green: #81ca14;
 
     --land-btn-hover: #D66845;
@@ -279,7 +280,6 @@ h1 {
 
 .land-button-secondary-colour:hover {
     background-color: var(--land-btn-secondary-hover);
-    color: var(--hover-text);
     color: var(--hover-text-2);
 }
 
