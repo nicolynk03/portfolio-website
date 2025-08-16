@@ -16,7 +16,8 @@
     --hover-text-1: #F9F6EF;
     --hover-text-2: #F9F6EF;
 
-    --navbar-scrolled: rgba(233, 203, 134, 0.9);
+    --navbar-bg: #ECD29A;
+    --navbar-scrolled: rgba(236, 210, 154, 0.9);
 
     --footer-bg: #454545;
     --footer-text: #E97451;
@@ -39,7 +40,8 @@
     --hover-text-1: #F5A623;
     --hover-text-2: #000000;
 
-    --navbar-scrolled: rgba(245, 166, 35, 0.9);
+    --navbar-bg: #D98C1F;
+    --navbar-scrolled: rgba(217, 140, 31, 0.9);
     --highlight-colour: #F5A623;
 
     --accent-hover: #4a85b0;
@@ -88,7 +90,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background-color: var(--secondary);
+    background-color: var(--navbar-bg);
     z-index: 9999;
 }
 
@@ -259,7 +261,7 @@ h1 {
     /* allow ::before outside */
     overflow: visible;
     z-index: 0;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
 }
 
 .land-button {
@@ -282,6 +284,14 @@ h1 {
     background-color: var(--land-btn-secondary-hover);
     color: var(--hover-text-2);
 }
+
+.land-button:hover, .land-button-secondary-colour:hover {
+    /* slighltly enlarge buttons */
+    transform: scale(1.05);
+    /* subtle depth */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
 
 .landing-wrapper {
     display: flex;
