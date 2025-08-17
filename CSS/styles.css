@@ -593,6 +593,22 @@ h1 {
     stroke: var(--svg-icon-hover);
 }
 
+#companion {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    width: 110px;
+    height: auto;
+    cursor: grab;
+    transition: transform 0.2s, filter 0.2s;
+    z-index: 9999;
+    user-select: none;
+}
+
+#companion.dragging {
+    cursor: grabbing;
+}
+
 /* footer */
 footer {
     margin-top: auto;

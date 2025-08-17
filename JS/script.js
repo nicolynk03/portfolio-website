@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 // change navbar style when user scrolls through the website
-window.onscroll = function() {
+window.onscroll = function () {
     navbarWhenScrolled();
 };
 
@@ -51,9 +51,9 @@ document.querySelector('#hamburger-menu').onclick = () => {
 };
 // close sidebar menu by clicking anywhere outside the sidebar itself
 const hamburger = document.querySelector('#hamburger-menu');
-document.addEventListener('click', function(event) {
+document.addEventListener('click', function (event) {
     // if clicked outside hamburger menu and navbar
-    if(!hamburger.contains(event.target) && !navbarNav.contains(event.target)) {
+    if (!hamburger.contains(event.target) && !navbarNav.contains(event.target)) {
         navbarNav.classList.remove('active');
     }
 });
