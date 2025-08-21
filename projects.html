@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolyn Kwok - Projects</title>
+
+    <link rel="stylesheet" href="CSS/styles.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+    <!-- navigation bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <!-- <a href="index.html">nk.</a> -->
+            <button id="theme-toggle" onclick="switchTheme()">☀️</button>
+            <a href="index.html" class="logo">nk.<img src="images\temp-site-logo-removebg-preview.png"
+                    alt="temporary-sketch-logo"></a>
+        </div>
+        <div class="navbar-nav">
+            <a href="index.html">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="about.html">About</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="navbar-extra">
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+    </nav>
+    <!-- navigation bar end -->
+
+    <div class="container">
+        <div class="content" id="projects">
+
+            <!-- filter buttons -->
+            <div class="filter-buttons">
+                <button data-filter="all" class="filter-btn active">All</button>
+                <button data-filter="ongoing" class="filter-btn">Ongoing</button>
+                <button data-filter="completed" class="filter-btn">Completed</button>
+                <button data-filter="learning" class="filter-btn">Currently learning</button>
+            </div>
+
+
+            <div class="projects-showcase projects-container">
+                <div class="project-card" data-type="completed">
+                    <span class="status-badge completed">Completed</span>
+                    <h3>Honours thesis</h3>
+                    <p>My honours project explores the use of machine learning to predict daily patient arrivals in the
+                        emergency department. The work extends further by forecasting sub-categories of arrivals, such
+                        as ward type and patient complexity. I experimented with models including SARIMAX, LSTM, and
+                        Random Forest, while gaining valuable experience in feature engineering to ensure high-quality
+                        data for training and testing.</p>
+                </div>
+
+                <!-- <div class="project-card">
+                    <h3>Project 2</h3>
+                    <p>Description of project 2</p>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <footer>
+        <!-- update year accordingly -->
+        &copy;
+        <script>document.write(new Date().getFullYear())</script> Nicolyn Kwok
+    </footer>
+
+
+
+    <script>
+        feather.replace();
+    </script>
+
+    <script src="JS/script.js"></script>
+    <script src="JS/companion.js"></script>
+
+</body>
+
+</html>

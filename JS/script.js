@@ -58,4 +58,31 @@ document.addEventListener('click', function (event) {
     }
 });
 
+// projects filtering logic
+const filterButtons = document.querySelectorAll(".filter-btn");
+const projectCards = document.querySelectorAll(".project-card");
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        // remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        const filter = button.getAttribute("data-filter");
+
+        projectCards.forEach(card => {
+            if (filter === "all" || card.getAttribute("data-type") === filter) {
+                // show relevant project card(s) with animation
+                card.classList.remove("hidden");
+            } else {
+                // hide irrelevant project card(s) with animation
+                card.classList.add("hidden");
+            }
+        });
+    });
+});
+
+
+
+
 

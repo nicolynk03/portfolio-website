@@ -76,8 +76,18 @@
         <div class="content" id="projects">
             <h2>Things I've Built</h2>
             <p>Here are some of my favourite projects that I'm currently working on or have worked on:</p>
+
+            <!-- filter buttons -->
+            <div class="filter-buttons">
+                <button data-filter="all" class="filter-btn active">All</button>
+                <button data-filter="ongoing" class="filter-btn">Ongoing</button>
+                <button data-filter="completed" class="filter-btn">Completed</button>
+                <button data-filter="learning" class="filter-btn">Currently learning</button>
+            </div>
+
             <div class="projects-showcase">
-                <div class="project-card">
+                <div class="project-card" data-type="completed">
+                    <span class="status-badge completed">Completed</span>
                     <h3>Honours thesis</h3>
                     <p>My honours project focuses on utilising various machine learning techniques to predict total
                         number of patient arrivals in an emergency department and further extend it to predict sub-types
@@ -89,7 +99,7 @@
                     <p>Description of project 2</p>
                 </div> -->
             </div>
-            <a href="#projects"><button class="land-button-secondary-colour">View all projects</button></a>
+            <a href="projects.html"><button class="land-button-secondary-colour">View all projects</button></a>
         </div>
         <!-- (recent) projects/things I've built section end-->
 

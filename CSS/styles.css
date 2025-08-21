@@ -547,7 +547,19 @@ h1 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: var(--text);
     transition: transform 0.2s, background-color 0.3s;
+
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+.project-card.hidden {
+    opacity: 0;
+    transform: scale(0.95);
+    /* so you can’t click hidden cards */
+    pointer-events: none;
+}
+
 
 [data-theme="dark"] .project-card {
     background-color: #444B52;
@@ -557,6 +569,73 @@ h1 {
 .project-card:hover {
     transform: translateY(-5px);
 }
+
+.status-badge {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.status-badge.completed {
+    background-color: var(--accent);
+    color: #F9F6EF;
+}
+
+.status-badge.ongoing {
+    background: var(--primary);
+    color: #F9F6EF;
+}
+
+.status-badge.learning {
+    background: var(--neon-green);
+    color: #3A3A3A;
+}
+
+/* projects page */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.project-card {
+    color: var(--text);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    min-height: 180px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+[data-theme="dark"] .project-card {
+    /* subtle dark card background */
+    background-color: #444B52; 
+    color: var(--text);
+}
+
+[data-theme="dark"] .project-link {
+    color: var(--accent);
+}
+
 
 
 /* misc */
@@ -627,6 +706,33 @@ h1 {
     stroke: var(--svg-icon-hover);
 }
 
+.filter-buttons {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.filter-btn {
+    background: var(--secondary);
+    color: var(--text);
+    border: none;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.filter-btn:hover {
+    background: var(--land-btn-secondary-hover);
+}
+
+.filter-btn.active {
+    background: var(--primary);
+    color: #fff;
+}
+
+
+
 #companion {
     position: fixed;
     top: 100px;
@@ -642,6 +748,7 @@ h1 {
 #companion.dragging {
     cursor: grabbing;
 }
+
 
 /* footer */
 footer {
