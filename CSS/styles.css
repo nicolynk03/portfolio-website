@@ -402,6 +402,7 @@ h1 {
     bottom: 28%;
     left: 4%;
 }
+
 /* (homepage) image emoji css end */
 
 /* Hover: fade in + float + rotate */
@@ -522,6 +523,39 @@ h1 {
 
 .experience-title h3 {
     color: var(--experience-title-about-page);
+}
+
+.projects-showcase {
+    /* arrange cards in a row */
+    display: flex;
+    /* space between cards */
+    gap: 20px;
+    /* wrap to next line if screen dimension is small */
+    flex-wrap: wrap;
+}
+
+.project-card {
+    /* grow/shrink, base 300px */
+    flex: 1 1 300px;
+    /* avoid getting too small */
+    min-width: 250px;
+    /* avoid getting too big */
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ECE6DB;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--text);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+[data-theme="dark"] .project-card {
+    background-color: #444B52;
+    color: var(--text);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
 }
 
 
