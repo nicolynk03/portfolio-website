@@ -647,8 +647,7 @@ h1 {
 }
 
 #project-github-link a:hover {
-    color: var(--project-link-hover);
-    text-decoration: underline;
+    color: #F5A623;
 }
 
 /* project transition from homepage to projects.html */
