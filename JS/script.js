@@ -82,7 +82,10 @@ filterButtons.forEach(button => {
     });
 });
 
-
+// to reduce flash when moving between pages
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+});
 
 
 

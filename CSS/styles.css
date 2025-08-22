@@ -74,6 +74,15 @@ body {
     min-height: 100vh;
     /* ensure full viewport height */
     display: flex;
+
+
+    /* reduce flash when moving between pages */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
 }
 
 * {
@@ -154,6 +163,30 @@ body {
     /* safari */
     -webkit-backdrop-filter: blur(5px);
 }
+
+.navbar a {
+    /* keeps link colour consistent */
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+    /* smooth colour change on hover */
+    transition: color 0.2s ease;
+}
+
+.navbar a:focus,
+.navbar a:active {
+    /* remove flash when clicked */
+    outline: none;
+    color: inherit;
+    background: transparent;
+}
+
+.navbar a:focus {
+    text-decoration: underline;
+    outline: none;
+}
+
+/* navbar CSS ends */
 
 /* general */
 .container {
