@@ -598,6 +598,12 @@ h1 {
     color: #3A3A3A;
 }
 
+#note {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-top: 10px;
+}
+
 /* project link (homepage) */
 #project-github-link a {
     /* pick a theme color */
@@ -611,6 +617,33 @@ h1 {
     color: var(--project-link-hover);
     text-decoration: underline;
 }
+
+/* project transition from homepage to projects.html */
+.project-card h3 a {
+    /* Keep text color consistent */
+    color: inherit;
+    /* Remove underline */
+    text-decoration: none;
+    /* Remove default focus outline */
+    outline: none;
+    /* Optional: smooth color change on hover */
+    transition: color 0.2s ease;
+}
+
+.project-card h3 a:focus,
+.project-card h3 a:active {
+    /* Prevent flashing on click */
+    outline: none;
+    /* Keep color same when clicked */
+    color: inherit;
+}
+
+/* accessibility focus */
+.project-card h3 a:focus {
+    text-decoration: underline;
+    outline: none;
+}
+
 
 
 /* projects page */
