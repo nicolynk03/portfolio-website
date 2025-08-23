@@ -11,3 +11,6 @@ This repository contains the development files for my personal portfolio website
 * Frontend: HTML, CSS, JavaScript
 * Styling: CSS variables, flexbox, responsive design
 
+## Credits
+* Fonts: [Google Fonts](https://fonts.google.com/)
+* Icons: [Feather Icons](https://feathericons.com/)
