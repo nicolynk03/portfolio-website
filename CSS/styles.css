@@ -219,6 +219,7 @@ p {
     line-height: 1.6;
     /* ~35px line height for readability */
     margin-bottom: 1em;
+    font-weight: 500;
 }
 
 h3 {
