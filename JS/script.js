@@ -32,9 +32,10 @@ window.addEventListener('DOMContentLoaded', () => {
         autoMode = true;
     }
 
+    // set initial theme
     document.documentElement.setAttribute("data-theme", savedTheme);
 
-    // update icon
+    // set/update icon
     // const themeBtn = document.getElementById("theme-toggle");
     if (autoMode) {
         themeBtn.innerHTML = "🌗"; // auto mode icon
@@ -43,6 +44,21 @@ window.addEventListener('DOMContentLoaded', () => {
         themeBtn.innerHTML = savedTheme === "dark" ? "🌙" : "☀️";
         // no tooltip for manual selection
         themeBtn.title = "";
+    }
+
+    // auto mode dynamic update
+    if (autoMode) {
+        const checkInterval = 60 * 1000; // check every 1 minute
+        setInterval(() => {
+            const now = new Date();
+            const hour = now.getHours();
+            const currentTheme = document.documentElement.getAttribute("data-theme");
+            const shouldBeDark = hour >= 18 || hour < 6;
+
+            if ((shouldBeDark && currentTheme !== "dark") || (!shouldBeDark && currentTheme !== "light")) {
+                document.documentElement.setAttribute("data-theme", shouldBeDark ? "dark" : "light");
+            }
+        }, checkInterval);
     }
 });
 
