@@ -16,11 +16,24 @@ function switchTheme() {
 
 // initialise icon on page load
 window.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = localStorage.getItem("theme") || "light";
+    // const savedTheme = localStorage.getItem("theme") || "light";
+    // document.documentElement.setAttribute("data-theme", savedTheme);
+
+
+    // const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
+
+    let savedTheme = localStorage.getItem("theme");
+
+    if (!savedTheme) {
+        // adjusted based on local time
+        const hour = new Date().getHours();
+        // First-time visitor: theme auto-picked by local time (🌙 after 6 PM, ☀️ otherwise).
+        savedTheme = (hours >=18 || hour < 6) ? "dark" : "light";
+    }
+
     document.documentElement.setAttribute("data-theme", savedTheme);
 
-
-    const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
+    // update icon
     const themeBtn = document.getElementById("theme-toggle");
     themeBtn.innerHTML = currentTheme === "dark" ? "🌙" : '☀️';
 });

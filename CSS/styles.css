@@ -608,7 +608,7 @@ h1 {
 
 .project-card.hidden {
     /* fully remove from layout */
-    display: none !important;  
+    display: none !important;
     opacity: 0;
     transform: scale(0.95);
     /* so you can’t click hidden cards */
@@ -837,9 +837,19 @@ h1 {
     color: var(--highlight-colour);
 }
 
-#intern-link:hover{
+#intern-link:hover {
     color: var(--neon-green);
 }
+
+body,
+.project-card,
+.status-badge,
+button,
+nav,
+footer {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
 
 .socials {
     display: flex;
