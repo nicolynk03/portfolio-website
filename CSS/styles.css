@@ -14,6 +14,7 @@
     --svg-icon-hover: #F9F6EF;
 
     --project-link-hover: #5e970f;
+    --highlight-colour: #E97451;
 
     --hover-text-1: #F9F6EF;
     --hover-text-2: #F9F6EF;
@@ -641,14 +642,14 @@ h1 {
 /* project link (homepage) */
 #project-github-link a {
     /* pick a theme color */
-    color: var(--neon-green);
+    color: var(--project-link-hover);
     font-weight: bold;
     text-decoration: none;
     transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
 #project-github-link a:hover {
-    color: #F5A623;
+    color: var(--highlight-colour)
 }
 
 /* project transition from homepage to projects.html */
@@ -719,6 +720,27 @@ h1 {
 
 [data-theme="dark"] .project-link {
     color: var(--accent);
+}
+
+/* expandable project card css (projects.html) */
+.full-project-card-content {
+    display: none;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: var(--accent);
+    cursor: pointer;
+    padding: 0;
+    margin-top: 0.5rem;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.read-more-btn:hover {
+    /* text-decoration: underline; */
+    color: var(--highlight-colour);
 }
 
 

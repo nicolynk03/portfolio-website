@@ -87,5 +87,20 @@ window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
 
+// to expand project card in projects.html
+document.querySelectorAll('.read-more-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const card = button.closest('.project-card');
+        const fullContent = card.querySelector(".full-project-card-content");
+
+        if (fullContent.style.display === "none") {
+            fullContent.style.display = 'block';
+            button.textContent = 'Read Less';
+        } else {
+            fullContent.style.display = 'none';
+            button.textContent = 'Read More';
+        }
+    });
+});
 
 
