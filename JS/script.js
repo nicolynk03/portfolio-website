@@ -2,6 +2,7 @@
 function switchTheme() {
     const root = document.documentElement;
     const currentTheme = document.documentElement.getAttribute("data-theme");
+
     const newTheme = currentTheme == "dark" ? "light" : "dark";
     root.setAttribute("data-theme", newTheme);
     // document.documentElement.setAttribute("data-theme", currentTheme == "dark" ? "light" : "dark");
@@ -9,33 +10,40 @@ function switchTheme() {
     // save current theme
     localStorage.setItem("theme", newTheme);
 
-    // update button icon according to current theme
+    // update button icon according to current theme (manual override disables auto)
     const themeBtn = document.getElementById("theme-toggle");
     themeBtn.innerHTML = newTheme === "dark" ? '🌙' : '☀️';
+    // no tooltip for manual selection
+    themeBtn.title = "";
 }
 
 // initialise icon on page load
 window.addEventListener('DOMContentLoaded', () => {
-    // const savedTheme = localStorage.getItem("theme") || "light";
-    // document.documentElement.setAttribute("data-theme", savedTheme);
-
-
-    // const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
+    const themeBtn = document.getElementById("theme-toggle");
 
     let savedTheme = localStorage.getItem("theme");
+    let autoMode = false;
 
     if (!savedTheme) {
-        // adjusted based on local time
-        const hour = new Date().getHours();
+        // adjusted based on local time (first-time visitor: auto-picked based on local time)
         // First-time visitor: theme auto-picked by local time (🌙 after 6 PM, ☀️ otherwise).
-        savedTheme = (hours >=18 || hour < 6) ? "dark" : "light";
+        const hour = new Date().getHours();
+        savedTheme = (hour >= 18 || hour < 6) ? "dark" : "light";
+        autoMode = true;
     }
 
     document.documentElement.setAttribute("data-theme", savedTheme);
 
     // update icon
-    const themeBtn = document.getElementById("theme-toggle");
-    themeBtn.innerHTML = currentTheme === "dark" ? "🌙" : '☀️';
+    // const themeBtn = document.getElementById("theme-toggle");
+    if (autoMode) {
+        themeBtn.innerHTML = "🌗"; // auto mode icon
+        themeBtn.title = "Auto theme (follows local time)";
+    } else {
+        themeBtn.innerHTML = savedTheme === "dark" ? "🌙" : "☀️";
+        // no tooltip for manual selection
+        themeBtn.title = "";
+    }
 });
 
 
