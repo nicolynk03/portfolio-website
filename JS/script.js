@@ -103,4 +103,28 @@ document.querySelectorAll('.read-more-btn').forEach(button => {
     });
 });
 
+// equalise heights across all cards (index.html)
+function equaliseHomepageProjectHeights() {
+    const cards = document.querySelectorAll('.homepage .projects-showcase .project-card');
+    let maxHeight = 0;
+
+    // reset heights
+    cards.forEach(card => card.style.height = "auto");
+
+    // find tallest card
+    cards.forEach(card => {
+        if (card.offsetHeight > maxHeight) maxHeight = card.offsetHeight;
+    });
+
+    // set all cards to tallest height
+    cards.forEach(card => card.style.height = maxHeight + 'px');
+}
+
+// Run on load and resize
+window.addEventListener('load', equaliseHomepageProjectHeights);
+window.addEventListener('resize', equaliseHomepageProjectHeights);
+
+
+
+
 

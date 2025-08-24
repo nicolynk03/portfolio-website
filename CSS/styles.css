@@ -571,6 +571,20 @@ h1 {
     gap: 20px;
     /* wrap to next line if screen dimension is small */
     flex-wrap: wrap;
+
+    justify-content: center;
+    /* prevent cards in same row from stretching */
+    align-items: flex-start;
+}
+
+/* Homepage project showcase */
+.homepage .projects-showcase {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    /* cards in the same row match tallest */
+    align-items: stretch;
 }
 
 .project-card {
@@ -609,13 +623,44 @@ h1 {
     transform: translateY(-5px);
 }
 
+.homepage .project-card {
+    /* grow/shrink */
+    flex: 1 1 300px;
+    min-width: 250px;
+    max-width: 400px;
+    display: flex;
+    /* content flows properly */
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ECE6DB;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
 .status-badge {
-    display: inline-block;
-    font-size: 1rem;
+    /* prevents stretching, fits content */
+    display: inline-flex;
+
+    /* vertical centering */
+    align-items: center;
+
+    /* horizontal centering inside badge */
+    justify-content: center;
+
+    /* slightly smaller for better fit on mobile */
+    font-size: 0.9rem;
     font-weight: bold;
-    padding: 3px 8px;
+    /* adjust for visual balance */
+    padding: 4px 10px;
     border-radius: 12px;
-    margin-bottom: 10px;
+
+    /* small spacing, no huge fixed margin */
+    /* top/right/bottom/left */
+    margin: 0 0.5rem 0.5rem 0;
+
+    /* prevents text from breaking */
+    white-space: nowrap;
 }
 
 .status-badge.completed {
@@ -678,6 +723,16 @@ h1 {
     outline: none;
 }
 
+.project-card h3,
+.project-card .status-badges-container {
+    display: flex;
+    /* space between badges */
+    gap: 0.5rem;
+    /* wrap if needed on small screens */
+    flex-wrap: wrap;
+}
+
+
 
 
 /* projects page */
@@ -690,13 +745,13 @@ h1 {
 }
 
 .project-card {
-    color: var(--text);
+    width: 300px;
     padding: 20px;
     border-radius: 10px;
-    width: 300px;
-    min-height: 180px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, background-color 0.3s;
+    color: var(--text);
+    /* min-height: 180px; */
 }
 
 .project-card:hover {
