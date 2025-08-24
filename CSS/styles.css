@@ -832,6 +832,14 @@ h1 {
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
+#intern-link {
+    text-decoration: none;
+    color: var(--highlight-colour);
+}
+
+#intern-link:hover{
+    color: var(--neon-green);
+}
 
 .socials {
     display: flex;
