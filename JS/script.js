@@ -71,7 +71,10 @@ filterButtons.forEach(button => {
         const filter = button.getAttribute("data-filter");
 
         projectCards.forEach(card => {
-            if (filter === "all" || card.getAttribute("data-type") === filter) {
+            // split multiple categories
+            const types = card.dataset.type.split(',').map(type => type.trim().toLowerCase());
+
+            if (filter === "all" || types.includes(filter.toLowerCase())) {
                 // show relevant project card(s) with animation
                 card.classList.remove("hidden");
             } else {
@@ -81,6 +84,8 @@ filterButtons.forEach(button => {
         });
     });
 });
+
+
 
 // to reduce flash when moving between pages
 window.addEventListener('load', () => {

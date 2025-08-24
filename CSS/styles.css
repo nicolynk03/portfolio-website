@@ -607,6 +607,8 @@ h1 {
 }
 
 .project-card.hidden {
+    /* fully remove from layout */
+    display: none !important;  
     opacity: 0;
     transform: scale(0.95);
     /* so you can’t click hidden cards */
