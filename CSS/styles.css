@@ -902,6 +902,11 @@ footer {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
+
+    /* anchor for ::after */
+    position: relative;
+    /* keeps underline inside rounded corners  */
+    /* overflow: hidden; */
 }
 
 .filter-btn:hover {
@@ -909,10 +914,27 @@ footer {
 }
 
 .filter-btn.active {
-    background: var(--primary);
+    background: var(--land-btn-secondary-hover);
     color: #fff;
 }
 
+.filter-btn::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    /* background: var(--primary); */
+    background: var(--accent);
+    border-radius: 0 0 5px 5px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active::after {
+    left: 0;
+    width: 100%;
+}
 
 
 #companion {
