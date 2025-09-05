@@ -741,13 +741,19 @@ h1 {
 .projects-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 20px;
-    justify-content: center;
+    /* justify-content: center; */
     padding: 20px;
 }
 
 .project-card {
-    width: 300px;
+    /* each card takes approx. 1/3 of the row */
+    /* 33.33% minus half the gap */
+    flex: 0 1 calc(33.33% - 13.33%);
+    box-sizing: border-box;
+
+    /* width: 300px; */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -798,6 +804,28 @@ h1 {
 .read-more-btn:hover {
     /* text-decoration: underline; */
     color: var(--highlight-colour);
+}
+
+/* thumbnail in project excerpt */
+.project-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.2s;
+}
+
+.project-thumbnail:hover {
+    transform: scale(1.03);
+}
+
+/* full screenshot in expanded project view */
+.project-full-screenshot {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -1036,6 +1064,27 @@ footer {
 
 }
 
+
+/* media queries start */
+@media (max-width: 1024px) {
+
+    /* 2 columns on tablets */
+    .project-card {
+        flex: 0 1 calc(50% - 10px);
+        /* 2 columns */
+    }
+}
+
+/* media queries for dev list in landing page */
+/* for tablets and larger devices */
+@media (min-width: 768px) {
+    .dev-list {
+        /* keep in one row */
+        flex-wrap: nowrap;
+        gap: 10rem;
+    }
+}
+
 /* mobile phone */
 @media (max-width: 450px) {
     html {
@@ -1057,16 +1106,13 @@ footer {
         margin: 0 auto 2rem auto;
         /* shrink further for small screens */
     }
-}
 
-/* media queries for dev list in landing page */
-/* for tablets and larger devices */
-@media (min-width: 768px) {
-    .dev-list {
-        /* keep in one row */
-        flex-wrap: nowrap;
-        gap: 10rem;
+    /* 1 column on mobile */
+    .project-card {
+        flex: 0 1 100%;
+        /* full width */
     }
 }
+
 
 /* media queries end*/
