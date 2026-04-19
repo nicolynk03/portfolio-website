@@ -486,6 +486,9 @@ h1 {
 .about-image img {
     margin-bottom: 4rem;
     margin-right: 2rem;
+
+    height: 300px;
+    width: 185px;
 }
 
 /* brief about */
