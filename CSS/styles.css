@@ -189,6 +189,31 @@ body.loaded {
 
 /* navbar CSS ends */
 
+/* animation css starts*/
+.mesh-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* for high blur gradient effect */
+    filter: blur(80px);
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+}
+
+.peach { background: #FFD8B1; top: 10%; left: 20%;}
+/* .soft-rose { background: #FFB37E; top: 30%; left: 60%;} */
+.soft-rose { background: #C2C5AA; top: 30%; left: 60%;}
+.muted-gold { background: #EED9A8; top: 60%; left: 30%;}
+/* animation css ends*/
+
 /* general */
 .container {
     margin: 4rem 2.5rem;
