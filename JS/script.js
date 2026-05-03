@@ -167,6 +167,16 @@ window.addEventListener('load', equaliseHomepageProjectHeights);
 window.addEventListener('resize', equaliseHomepageProjectHeights);
 
 
+// motion for blur circles animation (background parallax effect)
+window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const peach = document.querySelector(".peach");
+    const green = document.querySelector(".green");
+    const gold = document.querySelector(".muted-gold");
 
 
+    peach.style.transform = `translateY(${scrollY * 0.12}px) translateX(${scrollY * -0.03}px) rotate(${scrollY * 0.04}deg)`; // slower movement for peach circle
+    green.style.transform = `translateY(${scrollY * -0.06}px) translateX(${scrollY * 0.08}px) rotate(${scrollY * -0.05}deg)`;
+    gold.style.transform = `translateY(${scrollY * 0.04}px) translateX(${scrollY * -0.06}px) rotate(${scrollY * 0.02}deg)`;
+})
 

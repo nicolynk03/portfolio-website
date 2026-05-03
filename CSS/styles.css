@@ -198,7 +198,7 @@ body.loaded {
     height: 100%;
     z-index: -1;
     /* for high blur gradient effect */
-    filter: blur(80px);
+    filter: blur(60px);
 }
 
 .circle {
@@ -206,6 +206,9 @@ body.loaded {
     border-radius: 50%;
     width: 400px;
     height: 400px;
+
+    will-change: transform;
+    transition: transform 0.08s linear;
 
     animation: floatAround linear;
     animation-timeline: scroll();
