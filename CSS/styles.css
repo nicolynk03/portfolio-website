@@ -135,8 +135,10 @@ body.loaded {
 .navbar .navbar-nav a {
     color: var(--text);
     display: inline-block;
-    font-size: 1.5rem;
-    margin-right: 3rem;
+    font-size: 1.8rem;
+    margin-right: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
     text-decoration: none;
 }
 
@@ -477,7 +479,7 @@ h1 {
 /* Hover: fade in + float + rotate */
 .landing-image:hover .emoji {
     opacity: 1;
-    animation: float 3s ease-in-out infinite, rotate 18s linear infinite;
+    animation: float 5s ease-in-out infinite, rotate 18s linear infinite;
 }
 
 /* Float up and down */
@@ -630,7 +632,7 @@ h1 {
     max-width: 400px;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 28px;
     border-radius: 10px;
     background-color: #ECE6DB;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
